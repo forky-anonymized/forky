@@ -1,0 +1,1 @@
+timestamp,iter,n_new_reorg,n_reorg_in_tc,n_replacing_blocks,n_replaced_blocks,replacing_slot_distance,replaced_slot_distance,weight_gap_exists,is_boosted,epoch_gap,justified_epoch_gap,n_th_reorg

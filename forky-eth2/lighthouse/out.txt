@@ -1,0 +1,33 @@
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 1 test
+test fork_choice_forky ... FAILED
+
+failures:
+
+---- fork_choice_forky stdout ----
+--------------------------------------------------
+Test Failure
+Title: capella/fork_choice/forky
+2 tests, 2 failed, 0 skipped (known failure), 0 skipped (bls), 0 passed. (See below for errors)
+
+-------
+case 0 (8edcdf15b69b9ba07b6faf338d72eada81ea9e06 copy) from /home/whkim/new-forky/forky-eth2/lighthouse/testing/ef_tests/forky/pyspec_tests/8edcdf15b69b9ba07b6faf338d72eada81ea9e06 copy failed with NotEqual:
+head check failed: Got Head { slot: Slot(0), root: 0xde0946ce3fd98b8322335d33d9e66210043121806d6158dbdc61d1f349669ba4 } | Expected Head { slot: Slot(2), root: 0x770d058877053214862779fc86dfa100306ff0c4e4842f1d9089da016b1d57a7 }
+-------
+case 1 (8edcdf15b69b9ba07b6faf338d72eada81ea9e06) from /home/whkim/new-forky/forky-eth2/lighthouse/testing/ef_tests/forky/pyspec_tests/8edcdf15b69b9ba07b6faf338d72eada81ea9e06 failed with NotEqual:
+head check failed: Got Head { slot: Slot(0), root: 0xde0946ce3fd98b8322335d33d9e66210043121806d6158dbdc61d1f349669ba4 } | Expected Head { slot: Slot(2), root: 0x770d058877053214862779fc86dfa100306ff0c4e4842f1d9089da016b1d57a7 }
+
+thread 'fork_choice_forky' panicked at 'Tests failed (see above)', testing/ef_tests/src/results.rs:17:13
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    fork_choice_forky
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.23s
+

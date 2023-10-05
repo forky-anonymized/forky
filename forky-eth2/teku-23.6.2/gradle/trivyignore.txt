@@ -1,0 +1,4 @@
+# TRIVY IGNORE FILE
+
+# The following comment is an example of how CVE entries should be used in this file:
+# CVE-2022-0123
