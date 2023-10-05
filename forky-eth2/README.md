@@ -17,6 +17,13 @@ chmod +x llvm.sh
 # Run Lighthouse Fork-choice fuzzer
 cd fuzz-lighthouse     
 ENABLE_EPOCH_MUTATION=0 cargo fuzz run fc ./workspace/corpus/ --  -max_len=200000 -detect_leaks=0 -ignore_timeouts=1 -reduce_inputs=0 -rss_limit_mb=8192
+
+# Get testcases from workspace
+cd ../    # current dir is 'forky-eth2' now
+cp workspace_to_testcases.py ./fuzz-lighthouse/workspace
+cd ./fuzz-lighthouse/workspace
+python3 workspace_to_testcases.py
+mv result ../../testcases    # move result to 'forky-eth2/testcases'
 ```
 
 # How to Run Lighthouse Consensus Spec Test
