@@ -6,6 +6,8 @@ rm -rf ./corpus/*
 rm -rf ./test_cases/*
 rm -rf ./test_cases_with_check/*
 rm -rf ./reports/*
+mkdir -p ./test_cases
+mkdir -p ./test_cases_with_check
 cp ./saved_for_clear/block_* ./blocks
 cp ./saved_for_clear/attestation_* ./attestations
 cp ./saved_for_clear/*.yaml* ./corpus
