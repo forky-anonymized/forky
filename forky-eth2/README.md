@@ -1,6 +1,10 @@
 # forky-eth2
-- Reproducing findings in the paper: Just run 
+- Reproducing findings in the paper: Just run
+
+    Note that the Bug#9 was already fixed due to if it is enabled, Nimbus can not execute generated test cases.
+  
 - Finding new bugs: overwrite files in modified to each directory (It contains patches to not trigger already found discrepancies)
+  
 
 # How to Generate Testcases with Fuzzer
 WARNING: Fuzzing phase of forky-eth2 is **extremely slow** due to it is not optimized now!
