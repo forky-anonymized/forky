@@ -78,6 +78,7 @@ cd ..
 ```
 
 # How to Run Teku Consensus Spec Test
+If you generated too much test cases, then you should split them (Use _split_teku_testcases.sh_ and _splitted_generate_teku.sh_)
 ```
 # Install SDK Manager
 curl -s "https://get.sdkman.io" | bash  
@@ -102,6 +103,6 @@ cd ../..
 
 # If fail due to too many test cases (e.g., JVM heap space is exhausted), please do this at the last of validation (After finishing executing other clients)
 ./split_teku_testcases.sh
-./splitted_teku_execute.sh
+./splitted_generate_teku.sh
 
 ```
