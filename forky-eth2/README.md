@@ -1,6 +1,9 @@
 # forky-eth2
+- Reproducing findings in the paper: Just run 
+- Finding new bugs: overwrite files in modified to each directory (It contains patches to not trigger already found discrepancies)
 
 # How to Generate Testcases with Fuzzer
+WARNING: Fuzzing phase of forky-eth2 is **extremely slow** due to it is not optimized now!
 ```
 # Install Rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
