@@ -95,6 +95,8 @@ cd ./teku-23.6.2/eth-reference-tests
 gradle referenceTest
 cd ../..
 
+# Build Fail is expected result; It means there exists failed test case.
+
 # Results can be found in forky-eth2/teku-23.6.2/eth-reference-tests/build/reports/tests/referenceTest
 
 
