@@ -10,10 +10,10 @@ for i in $(seq 0 $((N_GROUPS - 1))); do
   testcases=$source_directory/*
 
   # Clean up the target directories
-  rm -rf $WORKDIR/teku-23.6.2/eth-reference-tests/src/referenceTest/generated_tests/tech/pegasys/teku/reference/capella/forky/*
-  rm -rf $WORKDIR/teku-23.6.2/eth-reference-tests/src/referenceTest/resources/consensus-spec-tests/tests/mainnet/capella/forky/*
+  rm -rf $WORKDIR/teku-23.6.2/eth-reference-tests/src/referenceTest/generated_tests/tech/pegasys/teku/reference/capella/forky
+  rm -rf $WORKDIR/teku-23.6.2/eth-reference-tests/src/referenceTest/resources/consensus-spec-tests/tests/mainnet/capella/forky
   mkdir -p $WORKDIR/teku-23.6.2/eth-reference-tests/src/referenceTest/generated_tests/tech/pegasys/teku/reference/capella/forky
-  mkdir -p $WORKDIR/teku-23.6.2/eth-reference-tests/src/referenceTest/resources/consensus-spec-tests/tests/mainnet/capella/forky/
+  mkdir -p $WORKDIR/teku-23.6.2/eth-reference-tests/src/referenceTest/resources/consensus-spec-tests/tests/mainnet/capella/forky
 
   for testcase in $testcases; do
     testname=$(basename $testcase)
