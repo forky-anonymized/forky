@@ -51,7 +51,7 @@ mv result ../../testcases    # move result to 'forky-eth2/testcases'
 cd nimbus-23.5.1
 mv tmp.git .git
 make consensus_spec_tests_mainnet -j4
-# If you fail to build due to existing ... error, then remove 'vendor' dir (rm -rf vendor)
+# If you fail to build due to existing submodule error, then remove 'vendor' dir (rm -rf vendor)
 cd ..
 
 # Put testcases in forky-eth2/testcases
