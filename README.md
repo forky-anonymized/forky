@@ -3,6 +3,7 @@
 Repo for anonymous submission and artifact evaluation
 
 **Open only in the review period** (to be reopened as a public with identity after review).
+**Warning** This proof-of-concept implementation utilizes a large amount of disk I/O that can impact SSD lifetime.
 
 ### Forky Bitcoin
 (forky-bitcoin) Differential testing Bitcoin fork resolution implementation with Forky
