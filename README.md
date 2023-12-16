@@ -1,6 +1,6 @@
 # Testing Fork Resolutions in Bitcoin and Ethereum Clients
 ## Forky Proof-of-Concept Implementation
-Repo for anonymous submission
+Repo for anonymous submission and artifact evaluation
 
 **Open only in the review period** (to be reopened as a public with identity after review).
 
