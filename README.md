@@ -1,4 +1,4 @@
-# Testing Fork Resolutions in Multiple Bitcoin and Ethereum Clients
+# Testing Fork Resolutions in Bitcoin and Ethereum Clients
 ## Forky Proof-of-Concept Implementation
 Repo for anonymous submission
 
