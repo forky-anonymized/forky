@@ -10,6 +10,10 @@ Repo for anonymous submission and artifact evaluation
 (forky-bitcoin) Differential testing Bitcoin fork resolution implementation with Forky
 * Target client: Bitcoin Core (C++), Bitcoin Knots (C++), btcd (Go), bcoin (JavaScript)
 
-### Forky Ethereum 2.0
+### Forky Ethereum PoW (1.0) 
+(forky-eth1) Differential testing Ethereum 1.0 (PoW) fork resolution implementation with Forky
+* Target client: Go-ethereum (Go)
+
+### Forky Ethereum PoS (2.0)
 (forky-eth2) Differential testing Ethereum 2.0 fork resolution implementation with Forky
 * Target client: Prysm (Go), Lighthouse (Rust), Teku (Java), Nimbus (Nim)
