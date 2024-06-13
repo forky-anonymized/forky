@@ -12,5 +12,6 @@ go version
 ```
 cd ./go-ethereum/core
 chmod +x timeout.sh
+mkdir -p corpus/FuzzForky
 ./timeout.sh
 ```
