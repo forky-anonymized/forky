@@ -7,12 +7,13 @@ do
 
     # Save its PID
     PID=$!
+    echo "$PID"
 
     # Wait
     sleep 60
 
     # Kill the process
-    kill $PID
+    pkill -9 -f FuzzForky
 
     # Wait for the process to terminate
     wait $PID

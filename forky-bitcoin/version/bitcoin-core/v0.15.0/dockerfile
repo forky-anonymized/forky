@@ -62,7 +62,7 @@ RUN apt-get update \
  && cp /code/utiltime.cpp /bitcoin/src/utiltime.cpp \
  && ./autogen.sh \
  && sleep 1 \
- && CC=/usr/bin/clang-13 CXX=/usr/bin/clang++-13 \
+ && CC=/usr/bin/clang-17 CXX=/usr/bin/clang++-17 \
     ./configure --enable-fuzz --with-sanitizers=address,fuzzer,undefined \ 
  && sleep 1 \
  && make -j 8

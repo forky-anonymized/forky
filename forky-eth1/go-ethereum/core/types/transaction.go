@@ -24,6 +24,8 @@ import (
 	"sync/atomic"
 	"time"
 
+	math_rand "math/rand"
+
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	"github.com/ethereum/go-ethereum/crypto"
@@ -76,6 +78,57 @@ type txdataMarshaling struct {
 
 func NewTransaction(nonce uint64, to common.Address, amount *big.Int, gasLimit uint64, gasPrice *big.Int, data []byte) *Transaction {
 	return newTransaction(nonce, &to, amount, gasLimit, gasPrice, data)
+}
+
+func NewFuzzTransaction(nonce uint64, to common.Address, amount *big.Int, gasLimit uint64, gasPrice *big.Int, data []byte, seed int) *Transaction {
+	return newFuzzTransaction(nonce, &to, amount, gasLimit, gasPrice, data, seed)
+}
+
+// genRandomDataFromOriginal generates new data based on the original data by randomly selecting bytes from it.
+func genRandomDataFromOriginal(n int, seed int64, orgData []byte) []byte {
+	if len(orgData) == 0 {
+		return nil
+	}
+
+	randGen := math_rand.New(math_rand.NewSource(seed))
+	newData := make([]byte, n)
+
+	for i := 0; i < n; i++ {
+		index := randGen.Intn(len(orgData))
+		newData[i] = orgData[int64(index)]
+	}
+
+	return newData
+}
+
+func newFuzzTransaction(nonce uint64, to *common.Address, amount *big.Int, gasLimit uint64, gasPrice *big.Int, data []byte, seed int) *Transaction {
+	// gen random big int
+	data = genRandomDataFromOriginal(seed%100, int64(seed), data)
+	if len(data) > 0 {
+		data = common.CopyBytes(data)
+	}
+
+	d := txdata{
+		AccountNonce: nonce,
+		Recipient:    to,
+		Payload:      data,
+		Amount:       new(big.Int),
+		GasLimit:     gasLimit,
+		Price:        new(big.Int),
+		V:            new(big.Int),
+		R:            new(big.Int),
+		S:            new(big.Int),
+	}
+	if amount != nil {
+		d.Amount.Set(amount)
+	}
+	if gasPrice != nil {
+		d.Price.Set(gasPrice)
+	}
+	return &Transaction{
+		data: d,
+		time: time.Now(),
+	}
 }
 
 func NewContractCreation(nonce uint64, amount *big.Int, gasLimit uint64, gasPrice *big.Int, data []byte) *Transaction {

@@ -6,7 +6,8 @@ if [ "$#" -ne 2 ]; then
 	exit 1
 fi
 
-PACKAGE_VERSION=("bitcoin/23.0.0" "bitcoin/22.0.0" "bitcoin/0.21.2" "bitcoin/0.21.1" "bitcoin/0.21.0" 
+PACKAGE_VERSION=("bitcoin/27.1.0" "bitcoin/26.0.0" "bitcoin/25.0.0" "bitcoin/24.1.0"
+"bitcoin/23.0.0" "bitcoin/22.0.0" "bitcoin/0.21.2" "bitcoin/0.21.1" "bitcoin/0.21.0" 
 "bitcoin/0.20.1" "bitcoin/0.20.0" "bitcoin/0.19.1" "bitcoin/0.19.0.1" "bitcoin/0.19.0" "bitcoin/0.18.1" 
 # "bitcoin/0.18.0" "bitcoin/0.17.1" "bitcoin/0.17.0.1" "bitcoin/0.17.0" "bitcoin/0.16.3" "bitcoin/0.16.2" 
 "bitcoin/0.18.0" "bitcoin/0.17.1" "bitcoin/0.17.0" "bitcoin/0.16.3" "bitcoin/0.16.2" 

@@ -1,5 +1,53 @@
 version: '3.0'
 services: 
+  v27.1: 
+    container_name: v27.1-fuzz
+    image: ubuntu-bitcoin:v27.1
+    working_dir: /bitcoin
+    privileged: true
+    #command: tail -f /dev/null
+    command: sh -c "chmod +x /script/fuzz_v22.sh && /script/fuzz_v22.sh"
+    volumes:
+      - ../../script:/script
+      - ../../import:/bitcoin/import
+      - ../../fuzzing_corpus:/bitcoin/fuzzing_corpus
+      - ./test_cases:/bitcoin/test_cases
+  v26.0: 
+    container_name: v26.0-fuzz
+    image: ubuntu-bitcoin:v26.0
+    working_dir: /bitcoin
+    privileged: true
+    #command: tail -f /dev/null
+    command: sh -c "chmod +x /script/fuzz_v22.sh && /script/fuzz_v22.sh"
+    volumes:
+      - ../../script:/script
+      - ../../import:/bitcoin/import
+      - ../../fuzzing_corpus:/bitcoin/fuzzing_corpus
+      - ./test_cases:/bitcoin/test_cases
+  v25.0: 
+    container_name: v25.0-fuzz
+    image: ubuntu-bitcoin:v25.0
+    working_dir: /bitcoin
+    privileged: true
+    #command: tail -f /dev/null
+    command: sh -c "chmod +x /script/fuzz_v22.sh && /script/fuzz_v22.sh"
+    volumes:
+      - ../../script:/script
+      - ../../import:/bitcoin/import
+      - ../../fuzzing_corpus:/bitcoin/fuzzing_corpus
+      - ./test_cases:/bitcoin/test_cases
+  v24.1: 
+    container_name: v24.1-fuzz
+    image: ubuntu-bitcoin:v24.1
+    working_dir: /bitcoin
+    privileged: true
+    #command: tail -f /dev/null
+    command: sh -c "chmod +x /script/fuzz_v22.sh && /script/fuzz_v22.sh"
+    volumes:
+      - ../../script:/script
+      - ../../import:/bitcoin/import
+      - ../../fuzzing_corpus:/bitcoin/fuzzing_corpus
+      - ./test_cases:/bitcoin/test_cases
   v23.0: 
     container_name: v23.0-fuzz
     image: ubuntu-bitcoin:v23.0

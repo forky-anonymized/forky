@@ -5,6 +5,41 @@ echo "############################"
 echo
 docker build -t ubuntu-bitcoin:base ./version/bitcoin-core/base
 
+
+echo "############################" 
+echo 'Build bitcoin base-22.04 image...'
+echo "############################" 
+echo
+docker build -t ubuntu-bitcoin:base-22.04 ./version/bitcoin-core/base-22.04
+
+echo
+echo "############################" 
+echo 'Build bitcoin v27.1 image'
+echo "############################" 
+echo
+docker build -t ubuntu-bitcoin:v27.1 ./version/bitcoin-core/v27.1
+
+echo
+echo "############################" 
+echo 'Build bitcoin v26.0 image'
+echo "############################" 
+echo
+docker build -t ubuntu-bitcoin:v26.0 ./version/bitcoin-core/v26.0
+
+echo
+echo "############################" 
+echo 'Build bitcoin v25.0 image'
+echo "############################" 
+echo
+docker build -t ubuntu-bitcoin:v25.0 ./version/bitcoin-core/v25.0
+
+echo
+echo "############################" 
+echo 'Build bitcoin v24.1 image'
+echo "############################" 
+echo
+docker build -t ubuntu-bitcoin:v24.1 ./version/bitcoin-core/v24.1
+
 echo
 echo "############################" 
 echo 'Build bitcoin v23.0 image'

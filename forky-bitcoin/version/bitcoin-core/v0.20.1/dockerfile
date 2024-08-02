@@ -41,7 +41,7 @@ RUN curl -LO https://bitcoincore.org/bin/bitcoin-core-0.20.1/bitcoin-0.20.1.tar.
 #  && cp /code/configure /bitcoin/configure \
  && cd /bitcoin \
  && ./autogen.sh \
- && CC=/usr/bin/clang-13 CXX=/usr/bin/clang++-13 \
+ && CC=/usr/bin/clang-17 CXX=/usr/bin/clang++-17 \
     ./configure --enable-fuzz --with-sanitizers=address,fuzzer,undefined \
  && make -j 8
 WORKDIR /bitcoin
